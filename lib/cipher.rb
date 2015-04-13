@@ -7,15 +7,14 @@ class Cipher
 
 		word.split(' ').join('').downcase().split('').each do |letter|
 	    i = array.index(letter)
-	    if num > 0
-	    	n = i + num%26
-    	else
-    		n = i - num%26
-	    end
-	    
+	    n = i + num%26
 	    new << array[n]
 		end
 
 		new.join('')
+	end
+
+	def self.decrypt(word, num)
+		
 	end
 end
